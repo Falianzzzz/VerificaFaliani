@@ -49,15 +49,17 @@ public class MioThread extends Thread {
             String[] messaggio = cmd.split(" ", 2);
 
             if (messaggio.length == 2 && messaggio[0].equals("LOGIN") || !(messaggio[1] == "")) {
-                for (String ut : utentiConn) {
+              
+                success = true;
+                utente = messaggio[1];
+                
+                  for (String ut : utentiConn) {
                     if (messaggio[1].equals(ut)) {
                         success = false;
                         out.println("ERR USERINUSE");
                         break;
                     }
                 }
-                success = true;
-                utente = messaggio[1];
             } else
                 out.println("ERR LOGINREQUIRED");
 
