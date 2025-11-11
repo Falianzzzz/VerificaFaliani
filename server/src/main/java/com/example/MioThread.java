@@ -52,7 +52,7 @@ public class MioThread extends Thread {
               
                 success = true;
                 utente = messaggio[1];
-                
+
                   for (String ut : utentiConn) {
                     if (messaggio[1].equals(ut)) {
                         success = false;
@@ -125,6 +125,7 @@ public class MioThread extends Thread {
                                 out.println("KO");
                             else
                                 disponibilitaGold -= quantita;
+                                out.println("OK");
 
                             break;
                         case "Pit":
@@ -133,6 +134,7 @@ public class MioThread extends Thread {
                                 out.println("KO");
                             else
                                 disponibilitaPit -= quantita;
+                                out.println("OK");
 
                             break;
                         case "Parterre":
@@ -141,6 +143,7 @@ public class MioThread extends Thread {
                                 out.println("KO");
                             else
                                 disponibilitaParterre -= quantita;
+                                out.println("OK");
 
                             break;
 

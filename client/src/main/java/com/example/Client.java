@@ -35,12 +35,14 @@ public class Client {
 
         String command;
         do {
-            System.out.println("\nInserisci l'operazione:\n1: visualizza\n2: compra\n4: quit");
+            System.out.println("\nInserisci l'operazione:\n1: visualizza\n2: compra\n3: quit");
             command = scanner.nextLine();
         switch (command) {
                 case "visualizza":
+                out.println("N");
                    String s = in.readLine();
                    System.out.println(s);
+
                     break;
 
                 case "compra":
@@ -48,9 +50,9 @@ public class Client {
                     System.out.println("Inserisci il tipo e la quantità dei biglietti: ");
                     String id = scanner.nextLine();
                     out.println(id);
-                    String st = in.readLine();
-                    System.out.println(st);
-                    
+                    String str = in.readLine();
+                    if(str.equals("OK"))System.out.println("compra andata a successo");
+                    else System.out.println("compra non riuscita");
                     break;
 
                 case "quit":
